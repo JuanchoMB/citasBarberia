@@ -7,7 +7,8 @@ import java.time.LocalDate;
 
 
 public class CitaFactory {
-    public static Cita crearCita(Cliente cliente, String fecha, String hora) {
+
+    public static Cita crearCita(Cliente cliente, LocalDate fecha, String hora) {
         return new Cita(cliente, fecha, hora);
     }
 }

@@ -4,11 +4,11 @@ import java.time.LocalDate;
 
 public class Cita {
     private Cliente cliente;
-    private String fecha;
+    private LocalDate fecha;
     private String hora;
 
     // Constructor
-    public Cita(Cliente cliente, String fecha, String hora) {
+    public Cita(Cliente cliente, LocalDate fecha, String hora) {
         this.cliente = cliente;
         this.fecha = fecha;
         this.hora = hora;
@@ -16,12 +16,12 @@ public class Cita {
 
 
 
-    // Getters sdompo
+    // Getters
     public Cliente getCliente() {
         return cliente;
     }
 
-    public String getFecha() {
+    public LocalDate getFecha() {
         return fecha;
     }
 
@@ -34,7 +34,7 @@ public class Cita {
         this.cliente = cliente;
     }
 
-    public void setFecha(String fecha) {
+    public void setFecha(LocalDate fecha) {
         this.fecha = fecha;
     }
 
