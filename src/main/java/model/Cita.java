@@ -14,7 +14,9 @@ public class Cita {
         this.hora = hora;
     }
 
-    // Getters
+
+
+    // Getters sdompo
     public Cliente getCliente() {
         return cliente;
     }
