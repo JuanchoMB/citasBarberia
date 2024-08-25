@@ -2,9 +2,7 @@ package factory;
 
 import model.Cita;
 import model.Cliente;
-
 import java.time.LocalDate;
-
 
 public class CitaFactory {
 
