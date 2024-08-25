@@ -7,7 +7,7 @@ public class Cita {
     private LocalDate fecha;
     private String hora;
 
-    // Constructorr
+    // Constructor
 
     public Cita(Cliente cliente, LocalDate fecha, String hora) {
         this.cliente = cliente;

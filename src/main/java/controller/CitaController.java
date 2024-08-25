@@ -7,7 +7,6 @@ import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 import model.Cita;
 import model.Cliente;
-
 import java.util.ArrayList;
 import java.util.List;
 
