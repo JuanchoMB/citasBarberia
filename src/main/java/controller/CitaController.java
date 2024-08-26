@@ -27,30 +27,29 @@ public class CitaController {
     @FXML
     private ListView<String> citasListView;
 
-    // Lista para almacenar las citas
-    private List<Cita> citas = new ArrayList<>();
+    //Lista para almacenar las citas
+    private final List<Cita> citas = new ArrayList<>();
 
 
     @FXML
     protected void agendarCita() {
-        // Validar que los campos no estén vacíos
+        //Validar que los campos no estén vacíos e impirimir error
         if (nombreField.getText().isEmpty() ||
                 telefonoField.getText().isEmpty() ||
                 fechaField.getValue() == null ||
                 horaField.getText().isEmpty()) {
-
-            // Imprimir mensaje de error en la consola
+            //Mensaje si hay datos incompletos
             System.out.println("Por favor, complete todos los campos antes de agendar la cita.");
             return;
         }
-        // Crear el cliente y la cita
+        //Crea el cliente y la cita
         Cliente cliente = new Cliente(nombreField.getText(), telefonoField.getText());
         Cita cita = CitaFactory.crearCita(cliente, fechaField.getValue(), horaField.getText());
 
-        // Guardar la cita en la lista
+        //Guarda la cita en la lista
         citas.add(cita);
 
-        // Imprimir mensaje de confirmación en la consola
+        //Imprimir mensaje de confirmación en la consola
         System.out.println("Cita agendada para: " + cliente.getNombre() + " el " + cita.getFecha() + " a las " + cita.getHora());
 
         // Limpiar las casillas después de agendar la cita
@@ -60,15 +59,14 @@ public class CitaController {
         horaField.clear();
     }
 
-
     @FXML
     protected void mostrarCitas() {
-        // Limpiar el ListView antes de añadir nuevas citas
+        //Limpiar el ListView antes de añadir nuevas citas
         citasListView.getItems().clear();
 
-        // Recorrer la lista de citas y añadir cada cita al ListView
+        //Recorrer y añadir cada cita al ListView
         for (Cita cita : citas) {
-            String detalleCita = "Cita: " + cita.getCliente().getNombre() + " el " + cita.getFecha() + " a las " + cita.getHora() + " Telefono: " +cita.getCliente().getTelefono();
+            String detalleCita = "Cita: " + cita.getCliente().getNombre() + " el " + cita.getFecha() + " a las " + cita.getHora() + " // Telefono: " +cita.getCliente().getTelefono();
             citasListView.getItems().add(detalleCita);
         }
     }

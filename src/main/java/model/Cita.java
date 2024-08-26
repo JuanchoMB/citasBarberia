@@ -7,8 +7,8 @@ public class Cita {
     private LocalDate fecha;
     private String hora;
 
-    // Constructor
 
+    //Constructor
     public Cita(Cliente cliente, LocalDate fecha, String hora) {
         this.cliente = cliente;
         this.fecha = fecha;
@@ -16,19 +16,17 @@ public class Cita {
     }
 
 
-
     // Getters
     public Cliente getCliente() {
         return cliente;
     }
-
     public LocalDate getFecha() {
         return fecha;
     }
-
     public String getHora() {
         return hora;
     }
+
 
     // Setters
     public void setCliente(Cliente cliente) {

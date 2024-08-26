@@ -41,7 +41,7 @@
          <Font name="System Bold Italic" size="12.0" />
       </font></Button>
 
-    <Button onAction="#mostrarCitas" prefHeight="25.0" prefWidth="273.0" text="------- Mostrar Citas ------" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+    <Button onAction="#mostrarCitas" prefHeight="25.0" prefWidth="273.0" text="------- Mostrar Citas -------" GridPane.columnIndex="1" GridPane.rowIndex="8" />
 
     <ListView fx:id="citasListView" prefHeight="116.0" prefWidth="271.0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
 
